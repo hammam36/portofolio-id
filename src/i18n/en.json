@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Hammam",
+    "role": "Software Engineering Student",
+    "cta": "View Projects"
+  },
+  "projects": {
+    "title": "My Projects",
+    "list": [
+      {
+        "name": "E-Commerce Flutter App",
+        "desc": "Building a modern e-commerce UI with Flutter and Dart.",
+        "tech": ["Flutter", "Dart", "Firebase"]
+      },
+      {
+        "name": "School Information System",
+        "desc": "Web management system for student data using Laravel framework.",
+        "tech": ["Laravel", "MySQL", "Bootstrap"]
+      }
+    ]
+  }
+}

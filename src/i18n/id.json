@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "awards": "Prestasi",
+    "blog": "Blog",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, saya Hammam",
+    "role": "Siswa SMK RPL & Penulis Buku Dart",
+    "tagline": "Fokus pada pembuatan aplikasi mobile dengan Flutter dan sistem backend yang efisien.",
+    "cta": "Lihat Proyek",
+    "resume": "Unduh CV"
+  },
+  "projects": {
+    "title": "Proyek Saya",
+    "list": [
+      {
+        "name": "Aplikasi E-Commerce Flutter",
+        "desc": "Membangun UI toko online modern dengan Flutter dan Dart.",
+        "tech": ["Flutter", "Dart", "Firebase"]
+      },
+      {
+        "name": "Sistem Informasi Sekolah",
+        "desc": "Web pengelolaan data siswa menggunakan framework Laravel.",
+        "tech": ["Laravel", "MySQL", "Bootstrap"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skill & Alat",
+    "mindset": "Problem Solving • Continuous Learning • Clean Code"
+  },
+  "experience": {
+    "work": "Pengalaman Kerja",
+    "activity": "Kegiatan & Lomba"
+  }
+}

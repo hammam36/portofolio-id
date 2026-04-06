@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Animasi Masuk */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Hover Effect yang lebih halus untuk kartu Neumorphic */
+.nm-flat {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nm-flat:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.02);
+}
+
+/* Scrollbar Custom agar senada dengan UI */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+:root {
+  --bg: #e0e5ec;
+  --text: #2d3436;
+  --primary: #4b7bec;
+  --card-bg: #e0e5ec;
+  --nm-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
+               -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] {
+  --bg: #1b1d1f;
+  --text: #f1f2f6;
+  --primary: #70a1ff;
+  --card-bg: #1b1d1f;
+  --nm-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), 
+               -9px -9px 16px rgba(255, 255, 255, 0.05);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.nm-flat {
+  background: var(--card-bg);
+  box-shadow: var(--nm-shadow);
+}
