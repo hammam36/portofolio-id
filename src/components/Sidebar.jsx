@@ -1,18 +1,17 @@
 import React from 'react';
-// Mengimpor semua ikon sebagai satu objek bernama "Icon"
 import * as Icon from '../lib/icons.js';
 
 export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme, toggleTheme, activePage, setActivePage }) {
   
-  // Data navigasi dengan referensi ikon dari objek Icon
+  // Data navigasi — urutan sesuai spesifikasi
   const navItems = [
     { id: 'about', label: t.nav.about, icon: Icon.User },
+    { id: 'skills', label: t.nav.skills || 'Skills', icon: Icon.Zap },
+    { id: 'experience', label: t.nav.experience, icon: Icon.Briefcase },
     { id: 'projects', label: t.nav.projects, icon: Icon.Layers },
-    { id: 'skills', label: 'Skills', icon: Icon.Zap },
-    { id: 'awards', label: t.nav.awards || 'Awards', icon: Icon.Award },
-    { id: 'education', label: 'Education', icon: Icon.GraduationCap },
+    { id: 'awards', label: t.nav.awards || 'Prestasi', icon: Icon.Award },
     { id: 'blog', label: t.nav.blog || 'Blog', icon: Icon.PenTool },
-    { id: 'contact', label: t.nav.contact || 'Contact', icon: Icon.Mail },
+    { id: 'contact', label: t.nav.contact || 'Kontak', icon: Icon.Mail },
   ];
 
   const handleNavClick = (pageId) => {
@@ -30,7 +29,6 @@ export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme,
 
         <nav className="flex flex-col gap-3">
           {navItems.map((item) => {
-            // Membuat variabel komponen dari ikon agar bisa di-render sebagai tag <IconComponent />
             const IconComponent = item.icon;
             
             return (
@@ -43,12 +41,10 @@ export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme,
                     : 'hover:nm-flat text-gray-500'
                 }`}
               >
-                {/* Render ikon jika komponennya ada */}
                 {IconComponent && <IconComponent size={20} strokeWidth={activePage === item.id ? 2.5 : 2} />}
                 
                 <span className="text-sm tracking-tight">{item.label}</span>
 
-                {/* Indikator dot di kanan jika aktif */}
                 {activePage === item.id && (
                   <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[var(--primary)] shadow-[0_0_8px_var(--primary)]" />
                 )}
@@ -57,10 +53,21 @@ export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme,
           })}
         </nav>
 
-        {/* Bagian Bawah: Toggle Bahasa & Tema */}
+        {/* Bagian Bawah: Resume, Toggle Bahasa & Tema */}
         <div className="absolute bottom-10 left-6 right-6 flex flex-col gap-4">
+          {/* Tombol Resume */}
+          <a 
+            href="/cv-hammam.pdf" 
+            download
+            className="flex items-center justify-center gap-2 p-3 nm-flat rounded-xl text-xs font-bold text-[var(--primary)] active:scale-95 transition-transform"
+          >
+            <Icon.FileDown size={16} />
+            {t.hero.resume || 'Unduh CV'}
+          </a>
+
           <button onClick={toggleLang} className="flex items-center justify-center gap-2 p-3 nm-flat rounded-xl text-xs font-bold active:scale-95 transition-transform">
-            {lang === 'id' ? '🇬🇧 English' : '🇮🇩 Indonesia'}
+            <Icon.Globe size={16} />
+            {lang === 'id' ? 'English' : 'Indonesia'}
           </button>
           
           <button onClick={toggleTheme} className="flex items-center justify-center gap-2 p-3 nm-flat rounded-xl text-xs font-bold active:scale-95 transition-transform">

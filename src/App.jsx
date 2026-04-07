@@ -3,7 +3,12 @@ import id from "./i18n/id.json";
 import en from "./i18n/en.json";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
+import Awards from "./sections/Awards";
+import Blog from "./sections/Blog";
+import Contact from "./sections/Contact";
 
 function App() {
   const [lang, setLang] = useState(localStorage.getItem("lang") || "id");
@@ -29,11 +34,10 @@ function App() {
 
   return (
     <div className="min-h-screen flex overflow-hidden">
-      {" "}
-      {/* overflow-hidden agar tidak bisa di-scroll keluar main */}
       {/* Ornamen Background Glow (Hanya Estetika) */}
       <div className="fixed -top-24 -right-24 w-96 h-96 bg-(--primary) opacity-10 blur-[120px] rounded-full pointer-events-none" />
       <div className="fixed -bottom-24 -left-24 w-72 h-72 bg-purple-500 opacity-5 blur-[100px] rounded-full pointer-events-none" />
+
       <Sidebar
         isOpen={isSidebarOpen}
         setIsOpen={setIsSidebarOpen}
@@ -42,9 +46,10 @@ function App() {
         toggleLang={toggleLang}
         theme={theme}
         toggleTheme={toggleTheme}
-        activePage={activePage} // Kirim ini ke sidebar
-        setActivePage={setActivePage} // Kirim ini ke sidebar
+        activePage={activePage}
+        setActivePage={setActivePage}
       />
+
       <main className="flex-1 p-6 md:p-12 lg:ml-64 h-screen overflow-y-auto transition-all">
         {/* Tombol Menu Mobile */}
         <button
@@ -68,11 +73,14 @@ function App() {
         </button>
 
         {/* LOGIKA PINDAH HALAMAN */}
-        <div className="animate-in fade-in duration-500">
+        <div className="animate-in fade-in duration-500" key={activePage}>
           {activePage === "about" && <Hero t={t} />}
           {activePage === "skills" && <Skills t={t} />}
+          {activePage === "experience" && <Experience t={t} />}
           {activePage === "projects" && <Projects t={t} />}
-          {/* Kamu bisa tambah {activePage === 'contact' && <Contact t={t} />} nanti */}
+          {activePage === "awards" && <Awards t={t} />}
+          {activePage === "blog" && <Blog t={t} />}
+          {activePage === "contact" && <Contact t={t} />}
         </div>
       </main>
     </div>

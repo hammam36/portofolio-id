@@ -7,6 +7,19 @@ export {
   GraduationCap, 
   PenTool, 
   Mail,
-  Moon, // sekalian buat toggle tema
-  Sun   // sekalian buat toggle tema
+  Moon,
+  Sun,
+  FileDown,
+  Briefcase,
+  Trophy,
+  BookOpen,
+  Globe,
+  Send,
+  Calendar,
+  MapPin,
+  Phone,
+  ExternalLink,
+  ChevronRight,
+  Clock,
+  Tag
 } from 'lucide-react';

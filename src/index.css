@@ -62,3 +62,14 @@ body {
   background: var(--card-bg);
   box-shadow: var(--nm-shadow);
 }
+
+.nm-inset {
+  background: var(--card-bg);
+  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .nm-inset {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.03);
+}
