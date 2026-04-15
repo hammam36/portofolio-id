@@ -1,0 +1,31 @@
+{
+  "title": "Contact",
+  "subtitle": "Feel free to reach out for collaborations or inquiries.",
+  "form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "message": "Your Message",
+    "send": "Send Message"
+  },
+  "info_title": "Contact Info",
+  "info": {
+    "email": "hammam@example.com",
+    "phone": "+62 812-3456-7890",
+    "location": "East Java, Indonesia"
+  },
+  "social_title": "Social Media",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/hammam36"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "#"
+    },
+    {
+      "name": "Instagram",
+      "url": "#"
+    }
+  ]
+}

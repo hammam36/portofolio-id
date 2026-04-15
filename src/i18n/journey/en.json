@@ -1,0 +1,66 @@
+{
+  "title": "Journey",
+  "education_title": "Education",
+  "work_title": "Experience",
+  "education": [
+    {
+      "school": "Kindergarten Placeholder",
+      "major": "",
+      "period": "2010 - 2012",
+      "desc": "Early childhood education, building the foundation of creativity and socialization.",
+      "image": "/placeholder.jpg",
+      "default": false
+    },
+    {
+      "school": "Elementary School Placeholder",
+      "major": "",
+      "period": "2012 - 2018",
+      "desc": "Six years of primary education, building literacy, numeracy, and character skills.",
+      "image": "/placeholder.jpg",
+      "default": false
+    },
+    {
+      "school": "Junior High School Placeholder",
+      "major": "",
+      "period": "2018 - 2021",
+      "desc": "Secondary education, began exploring the world of technology and computers.",
+      "image": "/placeholder.jpg",
+      "default": false
+    },
+    {
+      "school": "Vocational High School Placeholder",
+      "major": "Software Engineering",
+      "period": "2022 - 2025",
+      "desc": "Studying software development, databases, and web & mobile programming. Active in extracurricular activities and competitions.",
+      "image": "/placeholder.jpg",
+      "default": true
+    }
+  ],
+  "work": [
+    {
+      "role": "Freelance Mobile Developer",
+      "company": "Self-Employed",
+      "period": "2024 - Present",
+      "desc": "Developing mobile applications for local clients using Flutter. Fully responsible from UI design to API integration and Play Store deployment.",
+      "tags": ["Freelance", "Paid"],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "role": "Industrial Internship (PKL)",
+      "company": "PT. Teknologi Nusantara",
+      "period": "July - September 2024",
+      "desc": "Involved in developing the company's internal information system. Tasked with building report modules using Laravel and conducting feature testing.",
+      "tags": ["Internship", "Unpaid"],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "role": "IT Guest Instructor",
+      "company": "Educational IT Outreach Team",
+      "period": "2023 - 2024",
+      "desc": "Collaborated with a team to develop IT curriculums and taught at 4 different educational institutions. Shared knowledge and best practices in technology with students.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/placeholder.jpg"
+    }
+  ],
+  "subtitle": "My educational background and professional experience."
+}

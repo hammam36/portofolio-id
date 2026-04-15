@@ -1,0 +1,31 @@
+{
+  "title": "Kontak",
+  "subtitle": "Jangan ragu untuk menghubungi saya terkait kolaborasi atau pertanyaan singkat.",
+  "form": {
+    "name": "Nama Lengkap",
+    "email": "Alamat Email",
+    "message": "Pesan Anda",
+    "send": "Kirim Pesan"
+  },
+  "info_title": "Informasi Kontak",
+  "info": {
+    "email": "hammam@example.com",
+    "phone": "+62 812-3456-7890",
+    "location": "Jawa Timur, Indonesia"
+  },
+  "social_title": "Media Sosial",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/hammam36"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "#"
+    },
+    {
+      "name": "Instagram",
+      "url": "#"
+    }
+  ]
+}

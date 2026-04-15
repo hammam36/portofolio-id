@@ -3,14 +3,13 @@ import * as Icon from '../lib/icons.js';
 
 export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme, toggleTheme, activePage, setActivePage }) {
   
-  // Data navigasi — urutan sesuai spesifikasi
   const navItems = [
     { id: 'about', label: t.nav.about, icon: Icon.User },
-    { id: 'skills', label: t.nav.skills || 'Skills', icon: Icon.Zap },
-    { id: 'experience', label: t.nav.experience, icon: Icon.Briefcase },
+    { id: 'abilities', label: t.nav.abilities || 'Abilities', icon: Icon.Zap },
+    { id: 'journey', label: t.nav.journey || 'Journey', icon: Icon.Route },
     { id: 'projects', label: t.nav.projects, icon: Icon.Layers },
-    { id: 'awards', label: t.nav.awards || 'Prestasi', icon: Icon.Award },
-    { id: 'blog', label: t.nav.blog || 'Blog', icon: Icon.PenTool },
+    { id: 'awards', label: t.nav.awards || 'Prestasi', icon: Icon.FileBadge },
+    { id: 'blog', label: t.nav.blog || 'Blog', icon: Icon.NotebookPen },
     { id: 'contact', label: t.nav.contact || 'Kontak', icon: Icon.Mail },
   ];
 
@@ -66,7 +65,7 @@ export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme,
           </a>
 
           <button onClick={toggleLang} className="flex items-center justify-center gap-2 p-3 nm-flat rounded-xl text-xs font-bold active:scale-95 transition-transform">
-            <Icon.Globe size={16} />
+            <Icon.Languages size={16} />
             {lang === 'id' ? 'English' : 'Indonesia'}
           </button>
           

@@ -1,0 +1,36 @@
+{
+  "title": "Projects",
+  "list": [
+    {
+      "name": "E-Commerce Flutter App",
+      "desc": "Building a modern e-commerce UI with Flutter and Dart.",
+      "tech": [
+        "Flutter",
+        "Dart",
+        "Firebase"
+      ],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "School Information System",
+      "desc": "Web management system for student data using Laravel framework.",
+      "tech": [
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "School Information System 2",
+      "desc": "Web management system for student data using Laravel framework.",
+      "tech": [
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "/placeholder.jpg"
+    }
+  ],
+  "subtitle": "Showcase of my featured frontend and backend works."
+}

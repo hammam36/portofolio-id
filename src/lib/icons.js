@@ -4,8 +4,9 @@ export {
   Layers, 
   Zap, 
   Award, 
+  FileBadge,
   GraduationCap, 
-  PenTool, 
+  NotebookPen, 
   Mail,
   Moon,
   Sun,
@@ -13,13 +14,16 @@ export {
   Briefcase,
   Trophy,
   BookOpen,
-  Globe,
+  Globe, // unused
+  Languages,
   Send,
   Calendar,
   MapPin,
   Phone,
   ExternalLink,
   ChevronRight,
+  ChevronLeft,
   Clock,
-  Tag
+  Tag,
+  Route
 } from 'lucide-react';

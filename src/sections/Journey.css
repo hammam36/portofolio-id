@@ -1,0 +1,274 @@
+/* ═══ Journey Section — Education Pipeline & Work ═══ */
+
+/* ─── Education Pipeline/Timeline (Curved Arc) ─── */
+.journey-pipeline {
+  position: relative;
+  width: 100%;
+  height: 520px; /* Base height to contain the arc, images, and description */
+  margin: 1rem 0 1rem 0;
+  overflow: hidden;
+}
+
+/* Spinning SVG Arc Container */
+.journey-pipeline-arc-container {
+  position: absolute;
+  top: 120px; 
+  left: 50%;
+  margin-left: -1000px; /* Half of 2000px */
+  width: 2000px;
+  height: 2000px;
+  z-index: 1;
+  pointer-events: none;
+  color: var(--primary);
+}
+
+.journey-pipeline-arc-svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: center center;
+}
+
+/* Pipeline cards container */
+.journey-pipeline-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Base style for all pipeline cards */
+.journey-pipeline-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -180px; /* offset half of width */
+  width: 360px;
+  padding: 1.5rem;
+  border-radius: 28px;
+  text-align: center;
+  cursor: pointer;
+  /* Smooth scaling, moving and fading */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.6s ease, 
+              filter 0.6s ease;
+  transform-origin: top center;
+  background: var(--card-bg);
+}
+
+/* ─── Card Positioning States ─── */
+/* Active Center Card */
+.journey-pipeline-card.active {
+  transform: translateX(0) translateY(0) scale(1);
+  z-index: 30;
+  opacity: 1;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+}
+
+/* Adjacent Left & Right */
+.journey-pipeline-card.adjacent-prev {
+  transform: translateX(-70%) translateY(140px) scale(0.6);
+  z-index: 20;
+  opacity: 0.85;
+}
+
+.journey-pipeline-card.adjacent-next {
+  transform: translateX(70%) translateY(140px) scale(0.6);
+  z-index: 20;
+  opacity: 0.85;
+}
+
+/* Far Left & Right */
+.journey-pipeline-card.far-prev {
+  transform: translateX(-125%) translateY(280px) scale(0.4);
+  z-index: 10;
+  opacity: 0.4;
+}
+
+.journey-pipeline-card.far-next {
+  transform: translateX(125%) translateY(280px) scale(0.4);
+  z-index: 10;
+  opacity: 0.4;
+}
+
+/* Completely Hidden (out of bounds) */
+.journey-pipeline-card.hidden-prev {
+  transform: translateX(-180%) translateY(400px) scale(0.2);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.journey-pipeline-card.hidden-next {
+  transform: translateX(180%) translateY(400px) scale(0.2);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ─── Clean Disclosing Description Bugfix ─── 
+   Instead of unmounting which shifts layout abruptly, 
+   CSS Grid is used to animate height smoothly from 0 to full */
+.journey-pipeline-desc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+  opacity: 0;
+}
+
+.journey-pipeline-desc > div {
+  overflow: hidden;
+}
+
+.journey-pipeline-card.active .journey-pipeline-desc {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* Pipeline card image */
+.journey-pipeline-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Pipeline navigation buttons - Overlapping active card sides */
+.journey-pipeline-nav {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px; /* Flanks 360px center card nicely */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  z-index: 40;
+  pointer-events: none; /* Let background elements be clickable */
+}
+
+.journey-pipeline-btn {
+  pointer-events: auto; /* Re-enable for the buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: var(--card-bg);
+  color: var(--text);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.journey-pipeline-btn:hover {
+  opacity: 1;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.journey-pipeline-btn:active {
+  transform: scale(0.9);
+}
+
+.journey-pipeline-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Pipeline dot indicators */
+.journey-pipeline-dots {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 100;
+}
+
+.journey-pipeline-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text);
+  opacity: 0.15;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.journey-pipeline-dot.active {
+  opacity: 0.7;
+  background-color: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ─── Responsive Adjustments ─── */
+@media (max-width: 1024px) {
+  .journey-pipeline-card.adjacent-prev {
+    transform: translateX(-50%) translateY(140px) scale(0.65);
+  }
+  .journey-pipeline-card.adjacent-next {
+    transform: translateX(50%) translateY(140px) scale(0.65);
+  }
+  .journey-pipeline-card.far-prev {
+    transform: translateX(-100%) translateY(280px) scale(0.4);
+  }
+  .journey-pipeline-card.far-next {
+    transform: translateX(100%) translateY(280px) scale(0.4);
+  }
+}
+
+@media (max-width: 767px) {
+  .journey-pipeline {
+    height: 580px;
+  }
+  .journey-pipeline-card {
+    width: 300px;
+    margin-left: -150px;
+  }
+  .journey-pipeline-img {
+    height: 140px;
+  }
+  .journey-pipeline-arc-container {
+    top: 90px;
+  }
+  .journey-pipeline-nav {
+    top: 130px;
+  }
+  
+  /* Stack closer for mobile */
+  .journey-pipeline-card.adjacent-prev {
+    transform: translateX(-35%) translateY(160px) scale(0.7);
+  }
+  .journey-pipeline-card.adjacent-next {
+    transform: translateX(35%) translateY(160px) scale(0.7);
+  }
+  .journey-pipeline-card.far-prev {
+    transform: translateX(-60%) translateY(300px) scale(0.5);
+    opacity: 0;
+  }
+  .journey-pipeline-card.far-next {
+    transform: translateX(60%) translateY(300px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* ─── Work Experience accent bar ─── */
+.journey-work-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+}

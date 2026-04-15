@@ -1,0 +1,35 @@
+{
+  "title": "Blog",
+  "subtitle": "Notes, tutorials, and opinions about the world of programming.",
+  "read_more": "Read More",
+  "min_read": "min read",
+  "posts": [
+    {
+      "title": "Why I Chose Flutter for My First Project",
+      "excerpt": "The story behind my decision to choose Flutter as my first framework for learning mobile app development.",
+      "date": "March 15, 2025",
+      "read_time": "5",
+      "tag": "Flutter",
+      "url": "#",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "title": "Productive Coding Tips for Vocational Students",
+      "excerpt": "Some habits I've applied to stay consistent with coding amidst a busy school schedule.",
+      "date": "February 28, 2025",
+      "read_time": "4",
+      "tag": "Productivity",
+      "url": "#",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "title": "My First LKS IT Software Solution Experience",
+      "excerpt": "From preparation to D-day, this is my experience participating in the district-level Student Competency Competition.",
+      "date": "January 10, 2025",
+      "read_time": "6",
+      "tag": "Experience",
+      "url": "#",
+      "image": "/placeholder.jpg"
+    }
+  ]
+}

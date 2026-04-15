@@ -1,0 +1,14 @@
+{
+  "greeting": "Hi, I'm",
+  "status": "Open to Work",
+  "name": "HAMMAM MUBARAK",
+  "tagline": "Focused on building mobile apps with Flutter and efficient backend systems.",
+  "cta": "View Projects",
+  "resume": "Download CV",
+  "profileImage": "/placeholder.jpg",
+  "professions": [
+    "Fullstack Developer",
+    "Android Developer",
+    "Junior UI/UX Designer"
+  ]
+}

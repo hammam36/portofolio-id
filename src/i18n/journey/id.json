@@ -1,0 +1,66 @@
+{
+  "title": "Perjalanan",
+  "education_title": "Pendidikan",
+  "work_title": "Pengalaman",
+  "education": [
+    {
+      "school": "TK Placeholder",
+      "major": "",
+      "period": "2010 - 2012",
+      "desc": "Pendidikan anak usia dini, membangun fondasi kreativitas dan sosialisasi.",
+      "image": "/placeholder.jpg",
+      "default": false
+    },
+    {
+      "school": "SD Negeri Placeholder",
+      "major": "",
+      "period": "2012 - 2018",
+      "desc": "Pendidikan dasar enam tahun, membangun kemampuan literasi, numerasi, dan karakter.",
+      "image": "/placeholder.jpg",
+      "default": false
+    },
+    {
+      "school": "SMP Negeri Placeholder",
+      "major": "",
+      "period": "2018 - 2021",
+      "desc": "Pendidikan menengah pertama, mulai mengenal dunia teknologi dan komputer.",
+      "image": "/placeholder.jpg",
+      "default": false
+    },
+    {
+      "school": "SMK Negeri Placeholder",
+      "major": "Rekayasa Perangkat Lunak",
+      "period": "2022 - 2025",
+      "desc": "Mendalami pengembangan perangkat lunak, basis data, dan pemrograman web & mobile. Aktif dalam kegiatan ekskul dan kompetisi.",
+      "image": "/placeholder.jpg",
+      "default": true
+    }
+  ],
+  "work": [
+    {
+      "role": "Freelance Mobile Developer",
+      "company": "Self-Employed",
+      "period": "2024 - Sekarang",
+      "desc": "Mengembangkan aplikasi mobile untuk klien lokal menggunakan Flutter. Bertanggung jawab penuh mulai dari desain UI hingga integrasi API dan deployment ke Play Store.",
+      "tags": ["Freelance", "Paid"],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "role": "Praktik Kerja Lapangan (PKL)",
+      "company": "PT. Teknologi Nusantara",
+      "period": "Juli - September 2024",
+      "desc": "Terlibat dalam pengembangan sistem informasi internal perusahaan. Bertugas membangun modul laporan menggunakan Laravel dan melakukan pengujian fitur.",
+      "tags": ["Internship", "Unpaid"],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "role": "Instruktur IT Tamu",
+      "company": "Bersama Tim Edukasi IT",
+      "period": "2023 - 2024",
+      "desc": "Berkolaborasi dengan tim untuk menyusun materi dan rutin mengajar IT di 4 instansi pendidikan yang berbeda. Dipercaya untuk membawakan materi seputar teknologi kepada siswa/i.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/placeholder.jpg"
+    }
+  ],
+  "subtitle": "Latar belakang pendidikan dan pencapaian pengalaman saya."
+}

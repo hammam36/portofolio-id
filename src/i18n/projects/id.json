@@ -1,0 +1,36 @@
+{
+  "title": "Proyek",
+  "list": [
+    {
+      "name": "Aplikasi E-Commerce Flutter",
+      "desc": "Membangun UI toko online modern dengan Flutter dan Dart.",
+      "tech": [
+        "Flutter",
+        "Dart",
+        "Firebase"
+      ],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "Sistem Informasi Sekolah",
+      "desc": "Web pengelolaan data siswa menggunakan framework Laravel.",
+      "tech": [
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "Sistem Informasi Sekolah 2",
+      "desc": "Web pengelolaan data siswa menggunakan framework Laravel.",
+      "tech": [
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "/placeholder.jpg"
+    }
+  ],
+  "subtitle": "Kumpulan karya terpilih dari pengembangan frontend dan backend."
+}

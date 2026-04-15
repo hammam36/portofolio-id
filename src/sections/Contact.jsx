@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as Icon from '../lib/icons.js';
+import "./Contact.css";
 
 export default function Contact({ t }) {
   const data = t.contact;
@@ -17,15 +18,15 @@ export default function Contact({ t }) {
   };
 
   return (
-    <section className="py-10 animate-fade">
-      <h2 className="text-3xl font-black mb-2 text-[var(--primary)] uppercase tracking-tighter">
+    <section className="py-10">
+      <h2 className="text-3xl font-black mb-2 text-[var(--primary)] uppercase tracking-tighter animate-slide-up">
         {data.title}
       </h2>
-      <p className="text-sm opacity-60 mb-10">{data.subtitle}</p>
+      <p className="text-sm opacity-60 mb-10 animate-slide-up delay-100">{data.subtitle}</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
         {/* Form — 3 kolom */}
-        <form onSubmit={handleSubmit} className="lg:col-span-3 nm-flat p-8 rounded-[30px] flex flex-col gap-5">
+        <form onSubmit={handleSubmit} className="lg:col-span-3 nm-flat p-8 rounded-[30px] flex flex-col gap-5 animate-slide-up delay-200">
           <div>
             <label className="text-xs font-bold uppercase tracking-widest opacity-50 mb-2 block">
               {data.form.name}
@@ -78,7 +79,7 @@ export default function Contact({ t }) {
         </form>
 
         {/* Info Kontak — 2 kolom */}
-        <div className="lg:col-span-2 flex flex-col gap-6">
+        <div className="lg:col-span-2 flex flex-col gap-6 animate-slide-up delay-300">
           {/* Card Info */}
           <div className="nm-flat p-6 rounded-[24px]">
             <h3 className="text-sm font-bold uppercase tracking-widest opacity-50 mb-5">

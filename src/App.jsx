@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import id from "./i18n/id.json";
-import en from "./i18n/en.json";
+import { id, en } from "./i18n/index.js";
 import Sidebar from "./components/Sidebar";
 import Hero from "./sections/Hero";
-import Skills from "./sections/Skills";
-import Experience from "./sections/Experience";
+import Abilities from "./sections/Abilities";
+import Journey from "./sections/Journey";
 import Projects from "./sections/Projects";
 import Awards from "./sections/Awards";
 import Blog from "./sections/Blog";
@@ -75,8 +74,8 @@ function App() {
         {/* LOGIKA PINDAH HALAMAN */}
         <div className="animate-in fade-in duration-500" key={activePage}>
           {activePage === "about" && <Hero t={t} />}
-          {activePage === "skills" && <Skills t={t} />}
-          {activePage === "experience" && <Experience t={t} />}
+          {activePage === "abilities" && <Abilities t={t} />}
+          {activePage === "journey" && <Journey t={t} />}
           {activePage === "projects" && <Projects t={t} />}
           {activePage === "awards" && <Awards t={t} />}
           {activePage === "blog" && <Blog t={t} />}

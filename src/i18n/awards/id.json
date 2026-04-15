@@ -1,0 +1,52 @@
+{
+  "title": "Prestasi",
+  "achievements_title": "Penghargaan",
+  "certifications_title": "Sertifikasi",
+  "achievements": [
+    {
+      "name": "Juara 2 LKS IT Software Solution for Business",
+      "issuer": "Dinas Pendidikan Kabupaten",
+      "year": "2024",
+      "desc": "Meraih peringkat kedua dalam kompetisi pengembangan perangkat lunak tingkat kabupaten.",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "Penulis Buku 'Belajar Dart untuk Pemula'",
+      "issuer": "Penerbit Indie",
+      "year": "2024",
+      "desc": "Menerbitkan buku panduan belajar bahasa pemrograman Dart untuk pemula, tersedia di platform digital.",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "Siswa Berprestasi Jurusan RPL",
+      "issuer": "SMK Negeri",
+      "year": "2023",
+      "desc": "Dinobatkan sebagai siswa dengan nilai akademik dan proyek terbaik di jurusan Rekayasa Perangkat Lunak.",
+      "image": "/placeholder.jpg"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Flutter Development Bootcamp",
+      "issuer": "Udemy",
+      "year": "2024",
+      "credential_url": "#",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "Belajar Membuat Aplikasi Flutter untuk Pemula",
+      "issuer": "Dicoding Indonesia",
+      "year": "2023",
+      "credential_url": "#",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "name": "Belajar Dasar Pemrograman Web",
+      "issuer": "Dicoding Indonesia",
+      "year": "2023",
+      "credential_url": "#",
+      "image": "/placeholder.jpg"
+    }
+  ],
+  "subtitle": "Penghargaan, sertifikasi, dan pencapaian penting."
+}

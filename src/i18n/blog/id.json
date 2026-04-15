@@ -1,0 +1,35 @@
+{
+  "title": "Blog",
+  "subtitle": "Catatan, tutorial, dan opini seputar dunia pemrograman.",
+  "read_more": "Baca Selengkapnya",
+  "min_read": "mnt baca",
+  "posts": [
+    {
+      "title": "Mengapa Saya Memilih Flutter untuk Proyek Pertama",
+      "excerpt": "Cerita di balik keputusan saya memilih Flutter sebagai framework pertama untuk belajar pengembangan aplikasi mobile.",
+      "date": "15 Maret 2025",
+      "read_time": "5",
+      "tag": "Flutter",
+      "url": "#",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "title": "Tips Produktif Coding untuk Siswa SMK",
+      "excerpt": "Beberapa kebiasaan yang saya terapkan agar bisa tetap konsisten coding di tengah padatnya jadwal sekolah.",
+      "date": "28 Februari 2025",
+      "read_time": "4",
+      "tag": "Produktivitas",
+      "url": "#",
+      "image": "/placeholder.jpg"
+    },
+    {
+      "title": "Pengalaman Pertama Ikut LKS IT Software Solution",
+      "excerpt": "Dari persiapan hingga hari H, inilah pengalaman saya mengikuti Lomba Kompetensi Siswa tingkat kabupaten.",
+      "date": "10 Januari 2025",
+      "read_time": "6",
+      "tag": "Pengalaman",
+      "url": "#",
+      "image": "/placeholder.jpg"
+    }
+  ]
+}

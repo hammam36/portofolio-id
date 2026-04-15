@@ -1,0 +1,195 @@
+/* ═══ Hero Section Styles ═══ */
+
+:root {
+  --accent: #22c55e;
+  --accent-glow: rgba(34, 197, 94, 0.6);
+  --accent-glow-dim: rgba(34, 197, 94, 0.2);
+}
+
+[data-theme="dark"] {
+  --accent: #4ade80;
+  --accent-glow: rgba(74, 222, 128, 0.6);
+  --accent-glow-dim: rgba(74, 222, 128, 0.2);
+}
+
+/* Hero Grid Layout — avatar column (prominent) left, main card right */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Left column: vertically centered, horizontally centered items */
+.hero-left-col {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+
+/* Profession card — compact, fits text snugly */
+.hero-profession-card {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Subtle hover for hero cards — overrides the aggressive nm-flat:hover */
+.hero-card-hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-card-hover:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.02);
+}
+
+/* Circular Avatar Card — large and prominent */
+.hero-avatar-card {
+  width: 70%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-avatar-card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+/* Main card hover override */
+.hero-card-main {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-card-main:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.02);
+}
+
+/* Status Badge */
+.hero-status-badge {
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+/* Blinking Green Dot */
+.hero-status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  animation: statusPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+  50% {
+    opacity: 0.25;
+    box-shadow: 0 0 2px var(--accent-glow-dim);
+  }
+}
+
+/* ─── Profession Cycler ─── */
+.hero-profession-cycler {
+  text-align: center;
+}
+
+.hero-profession-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  flex-shrink: 0;
+}
+
+.hero-profession-text {
+  display: inline-block;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Profession slide animations */
+.hero-profession-enter {
+  animation: professionSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.hero-profession-exit {
+  animation: professionSlideOut 0.4s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+@keyframes professionSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes professionSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    filter: blur(4px);
+  }
+}
+
+/* Profession Dot Indicators */
+.hero-profession-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text);
+  opacity: 0.15;
+  transition: all 0.4s ease;
+}
+
+.hero-profession-indicator.active {
+  opacity: 0.7;
+  background-color: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
