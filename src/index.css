@@ -2,8 +2,15 @@
 
 /* ═══ Global Animations ═══ */
 @keyframes slideUpFade {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-slide-up {
@@ -11,11 +18,25 @@
   animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
 
 /* ═══ Neumorphic Hover ═══ */
 .nm-flat {
@@ -31,9 +52,11 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 10px;
@@ -42,21 +65,39 @@
 
 /* ═══ Theme Variables ═══ */
 :root {
-  --bg: #e0e5ec;
-  --text: #2d3436;
-  --primary: #4b7bec;
-  --card-bg: #e0e5ec;
-  --nm-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
-               -9px -9px 16px rgba(255, 255, 255, 0.5);
+  /* Brand Logo Palettes (Tua ke Muda) */
+  --brand-1: #e40404;
+  /* Dark Red */
+  --brand-2: #fc4c04;
+  /* Dark Orange */
+  --brand-3: #fc8304;
+  /* Orange */
+  --brand-4: #fcb404;
+  /* Yellow Orange */
+  --brand-5: #fcdb04;
+  /* Yellow */
+
+  --bg: #f9ebe6; /* Warm pale peach/orange tint */
+  --text: #4a150b; /* Deep reddish-brown */
+  --primary: var(--brand-2); /* Darker for light mode contrast */
+  --card-bg: #f9ebe6;
+  /* Red-tinted main shadow and white highlight */
+  --nm-shadow: 9px 9px 16px rgba(228, 4, 4, 0.12), 
+               -9px -9px 16px rgba(255, 255, 255, 0.9);
+  /* Dark orange floating glow */
+  --nm-shadow-floating: 0px 10px 20px rgba(252, 76, 4, 0.15);
 }
 
 [data-theme="dark"] {
-  --bg: #1b1d1f;
-  --text: #f1f2f6;
-  --primary: #70a1ff;
-  --card-bg: #1b1d1f;
-  --nm-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), 
-               -9px -9px 16px rgba(255, 255, 255, 0.05);
+  --bg: #1f1210; /* Deep red-black */
+  --text: #fdf2d0; /* Soft pale yellow */
+  --primary: var(--brand-3); /* Brighter for dark mode contrast */
+  --card-bg: #1f1210;
+  /* Black drop shadow with Yellow-Orange highlight! */
+  --nm-shadow: 9px 9px 16px rgba(0, 0, 0, 0.6), 
+               -9px -9px 16px rgba(252, 180, 4, 0.06);
+  /* Pure Orange floating glow */
+  --nm-shadow-floating: 0px 10px 20px rgba(252, 131, 4, 0.15);
 }
 
 /* ═══ Global Body ═══ */
@@ -75,11 +116,11 @@ body {
 
 .nm-inset {
   background: var(--card-bg);
-  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), 
-              inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 4px 4px 8px rgba(228, 4, 4, 0.1), 
+              inset -4px -4px 8px rgba(255, 255, 255, 0.8);
 }
 
 [data-theme="dark"] .nm-inset {
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), 
-              inset -4px -4px 8px rgba(255, 255, 255, 0.03);
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), 
+              inset -4px -4px 8px rgba(252, 180, 4, 0.06);
 }

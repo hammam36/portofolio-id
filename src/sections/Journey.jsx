@@ -16,10 +16,10 @@ export default function Journey({ t }) {
       <div className="animate-slide-up delay-200">
         <SectionTabs
           tabs={[
-            { id: 'education', label: data.education_title, icon: Icon.GraduationCap },
             { id: 'work', label: data.work_title, icon: Icon.Briefcase },
+            { id: 'education', label: data.education_title, icon: Icon.GraduationCap },
           ]}
-          defaultTab="education"
+          defaultTab="work"
         >
           {{
             education: <PipelineCarousel key="education-carousel" items={data.education} />,

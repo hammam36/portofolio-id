@@ -25,5 +25,8 @@ export {
   ChevronLeft,
   Clock,
   Tag,
-  Route
+  Route,
+  FileText,
+  ZoomIn,
+  X
 } from 'lucide-react';

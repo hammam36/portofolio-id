@@ -4,48 +4,46 @@
   "certifications_title": "Sertifikasi",
   "achievements": [
     {
-      "name": "Juara 2 LKS IT Software Solution for Business",
-      "issuer": "Dinas Pendidikan Kabupaten",
-      "year": "2024",
-      "desc": "Meraih peringkat kedua dalam kompetisi pengembangan perangkat lunak tingkat kabupaten.",
-      "image": "/placeholder.jpg"
-    },
-    {
-      "name": "Penulis Buku 'Belajar Dart untuk Pemula'",
-      "issuer": "Penerbit Indie",
-      "year": "2024",
-      "desc": "Menerbitkan buku panduan belajar bahasa pemrograman Dart untuk pemula, tersedia di platform digital.",
-      "image": "/placeholder.jpg"
-    },
-    {
-      "name": "Siswa Berprestasi Jurusan RPL",
-      "issuer": "SMK Negeri",
-      "year": "2023",
-      "desc": "Dinobatkan sebagai siswa dengan nilai akademik dan proyek terbaik di jurusan Rekayasa Perangkat Lunak.",
-      "image": "/placeholder.jpg"
+      "name": "Juara 3 Lomba Prompting Tingkat Umum",
+      "issuer": "ITB Widya Gama Lumajang",
+      "year": "2025",
+      "desc": "Meraih peringkat ketiga dalam kompetisi prompting tingkat umum.",
+      "image": "/assets/achievements/itblumajang.png",
+      "document_url": "/assets/achievements/lombaprompting.png"
     }
   ],
   "certifications": [
     {
-      "name": "Flutter Development Bootcamp",
+      "name": "Membuat Aplikasi Android dengan Kecerdasan Artifisial",
       "issuer": "Udemy",
-      "year": "2024",
-      "credential_url": "#",
-      "image": "/placeholder.jpg"
+      "year": "2025",
+      "credential_url": "https://www.udemy.com/certificate/UC-31b21cf4-ce29-4634-88a2-7f17a3f03424/",
+      "document_url": "/assets/certifications/udemy-appwithai.pdf",
+      "image": "/assets/certifications/udemy.png"
     },
     {
-      "name": "Belajar Membuat Aplikasi Flutter untuk Pemula",
+      "name": "Belajar Prinsip Pemrograman SOLID",
       "issuer": "Dicoding Indonesia",
-      "year": "2023",
-      "credential_url": "#",
-      "image": "/placeholder.jpg"
+      "year": "2024",
+      "credential_url": "https://www.dicoding.com/certificates/2VX3KWK0JXYQ",
+      "document_url": "/assets/certifications/dicoding-pemrogramansolid.png",
+      "image": "/assets/certifications/dicoding.png"
     },
     {
       "name": "Belajar Dasar Pemrograman Web",
-      "issuer": "Dicoding Indonesia",
-      "year": "2023",
-      "credential_url": "#",
-      "image": "/placeholder.jpg"
+      "issuer": "Sololearn",
+      "year": "2025",
+      "credential_url": "https://www.sololearn.com/certificates/CC-7UWJHH0A",
+      "document_url": "/assets/certifications/sololearn- webdevelopment.png",
+      "image": "/assets/certifications/sololearn.png"
+    },
+    {
+      "name": "Website Deployment dengan AI Assist & EdgeOne",
+      "issuer": "CODEPOLITAN",
+      "year": "2026",
+      "credential_url": "https://codepolitan.com/c/DM7GNVR",
+      "document_url": "/assets/certifications/codpol-AIwebdeployEdgeOne.pdf",
+      "image": "/assets/certifications/codepolitan.png"
     }
   ],
   "subtitle": "Penghargaan, sertifikasi, dan pencapaian penting."

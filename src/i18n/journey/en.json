@@ -4,62 +4,70 @@
   "work_title": "Experience",
   "education": [
     {
-      "school": "Kindergarten Placeholder",
+      "school": "SDIT An-Nur - Sragen",
       "major": "",
-      "period": "2010 - 2012",
-      "desc": "Early childhood education, building the foundation of creativity and socialization.",
-      "image": "/placeholder.jpg",
-      "default": false
-    },
-    {
-      "school": "Elementary School Placeholder",
-      "major": "",
-      "period": "2012 - 2018",
+      "period": "2013 - 2019",
       "desc": "Six years of primary education, building literacy, numeracy, and character skills.",
-      "image": "/placeholder.jpg",
+      "image": "/assets/education/edu-placeholder.svg",
       "default": false
     },
     {
-      "school": "Junior High School Placeholder",
+      "school": "IMTAQ SHIGOR Isy Karima - Karanganyar",
       "major": "",
-      "period": "2018 - 2021",
-      "desc": "Secondary education, began exploring the world of technology and computers.",
-      "image": "/placeholder.jpg",
+      "period": "2019 - 2022",
+      "desc": "Secondary education, began exploring the world of technology, arabic language and Complete memorization of 30 juz.",
+      "image": "/assets/education/Isykarima.webp",
       "default": false
     },
     {
-      "school": "Vocational High School Placeholder",
+      "school": "SMK IDN Boarding School - Karanganyar",
       "major": "Software Engineering",
-      "period": "2022 - 2025",
-      "desc": "Studying software development, databases, and web & mobile programming. Active in extracurricular activities and competitions.",
-      "image": "/placeholder.jpg",
+      "period": "2024 - Now",
+      "desc": "Studying software development, databases, and web & mobile programming and english language. Active in extracurricular activities and competitions.",
+      "image": "/assets/education/idnbssolo.webp",
       "default": true
     }
   ],
   "work": [
     {
-      "role": "Freelance Mobile Developer",
-      "company": "Self-Employed",
-      "period": "2024 - Present",
-      "desc": "Developing mobile applications for local clients using Flutter. Fully responsible from UI design to API integration and Play Store deployment.",
-      "tags": ["Freelance", "Paid"],
-      "image": "/placeholder.jpg"
-    },
-    {
-      "role": "Industrial Internship (PKL)",
-      "company": "PT. Teknologi Nusantara",
-      "period": "July - September 2024",
-      "desc": "Involved in developing the company's internal information system. Tasked with building report modules using Laravel and conducting feature testing.",
-      "tags": ["Internship", "Unpaid"],
-      "image": "/placeholder.jpg"
-    },
-    {
-      "role": "IT Guest Instructor",
-      "company": "Educational IT Outreach Team",
-      "period": "2023 - 2024",
-      "desc": "Collaborated with a team to develop IT curriculums and taught at 4 different educational institutions. Shared knowledge and best practices in technology with students.",
+      "role": "IT Support | IDN Menyapa Nusantara",
+      "company": "Pengadilan Negeri Kelas 1A Mataram",
+      "period": "3 - 9 Februari 2026",
+      "desc": "Collaborated with the IT team at the Mataram Class 1A District Court. Carried out work in the IT field, such as designing and maintaining the website.",
       "tags": ["Volunteer", "Unpaid"],
-      "image": "/placeholder.jpg"
+      "image": "/assets/experience/pengadilanmataram.webp"
+    },
+    {
+      "role": "Guest IT Lecturer Assistant | IDN Teaching",
+      "company": "Diponegoro University",
+      "period": "8 - 10 November 2025",
+      "desc": "Collaborated with a team in a mini workshop to teach IT about basic AI Automation, especially for being an assistant in business and accelerating repetitive processes. Shared knowledge and best practices in AI Automation with students from the Business Administration major.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/undip.webp"
+    },
+    {
+      "role": "Guest IT Lecturer | IDN Teaching",
+      "company": "Amikom University Yogyakarta",
+      "period": "6 November 2025",
+      "desc": "Collaborated with a team to teach IT about basic AI, especially for being a design assistant in Visual Research, Copy Writing, Design Analysis and Creative Co-Pilot. Shared knowledge and best practices in design with students.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/amikom.webp"
+    },
+    {
+      "role": "Guest IT Teacher | IDN Teaching",
+      "company": "Al-Ihsan IBS Ungaran Semarang",
+      "period": "11 October 2025",
+      "desc": "Collaborated with a team to teach IT about basic design in Figma. Shared knowledge and best practices in design with students.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/al-ihsan.webp"
+    },
+    {
+      "role": "Guest IT Teacher | IDN Teaching",
+      "company": "SMP Pawyatan Daha 2",
+      "period": "21 - 25 April 2025",
+      "desc": "Collaborated with a team to teach IT about basic HTML coding. Shared knowledge and best practices in technology with students.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/pawyatandaha2.webp"
     }
   ],
   "subtitle": "My educational background and professional experience."

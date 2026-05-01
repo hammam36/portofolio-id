@@ -24,7 +24,10 @@ export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme,
         fixed top-0 left-0 h-full w-64 z-50 p-6 nm-flat transition-transform duration-300
         ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0
       `}>
-        <h1 className="text-2xl font-bold mb-10 text-[var(--primary)] text-center italic">Hammam.</h1>
+        <div className="flex items-center justify-center gap-3 mb-10">
+          <img src="/logo.svg" alt="HM-Porto Logo" className="w-7 h-7 object-contain" />
+          <h1 className="text-2xl font-bold text-[var(--primary)] italic">HM-Porto.</h1>
+        </div>
 
         <nav className="flex flex-col gap-3">
           {navItems.map((item) => {

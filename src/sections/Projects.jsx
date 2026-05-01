@@ -1,6 +1,11 @@
+import { useState } from "react";
+import ImageModal from "../components/ImageModal.jsx";
+import * as Icon from '../lib/icons.js';
 import "./Projects.css";
 
 export default function Projects({ t }) {
+  const [fullScreenImage, setFullScreenImage] = useState(null);
+
   return (
     <section id="projects" className="py-10">
       <h2 className="text-3xl font-black mb-2 text-[var(--primary)] uppercase tracking-tighter animate-slide-up">
@@ -13,12 +18,20 @@ export default function Projects({ t }) {
         {t.projects.list.map((proj, index) => (
           <div key={index} className="nm-flat rounded-[30px] flex flex-col justify-between overflow-hidden animate-slide-up" style={{ animationDelay: `${200 + index * 100}ms` }}>
             {/* Project Image Header */}
-            <div className="nm-inset m-4 rounded-[22px] overflow-hidden">
+            <div 
+              className="nm-inset m-4 rounded-[22px] overflow-hidden relative group cursor-zoom-in"
+              onClick={() => setFullScreenImage(proj.image)}
+            >
               <img
                 src={proj.image}
                 alt={proj.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-75"
               />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="p-3 bg-black/50 text-white rounded-full backdrop-blur-sm shadow-xl">
+                  <Icon.ZoomIn size={24} />
+                </div>
+              </div>
             </div>
 
             <div className="px-8 pb-8 pt-2 flex flex-col flex-1 justify-between">
@@ -39,6 +52,8 @@ export default function Projects({ t }) {
           </div>
         ))}
       </div>
+
+      <ImageModal src={fullScreenImage} onClose={() => setFullScreenImage(null)} />
     </section>
   );
 }

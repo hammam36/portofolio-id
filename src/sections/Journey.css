@@ -56,6 +56,7 @@
               filter 0.6s ease;
   transform-origin: top center;
   background: var(--card-bg);
+  box-shadow: var(--nm-shadow-floating);
 }
 
 /* ─── Card Positioning States ─── */
@@ -64,7 +65,6 @@
   transform: translateX(0) translateY(0) scale(1);
   z-index: 30;
   opacity: 1;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
 }
 
 /* Adjacent Left & Right */
@@ -164,6 +164,7 @@
   color: var(--text);
   opacity: 0.8;
   transition: all 0.3s ease;
+  box-shadow: var(--nm-shadow-floating);
 }
 
 .journey-pipeline-btn:hover {

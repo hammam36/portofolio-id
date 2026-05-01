@@ -2,35 +2,45 @@
   "title": "Proyek",
   "list": [
     {
-      "name": "Aplikasi E-Commerce Flutter",
-      "desc": "Membangun UI toko online modern dengan Flutter dan Dart.",
+      "name": "MomentAI",
+      "desc": "Aplikasi berbasis AI yang dapat membantu kamu dalam membuat jadwal dengan mudah.",
       "tech": [
         "Flutter",
         "Dart",
-        "Firebase"
+        "Google Gemini API",
+        "Google Calendar API"
       ],
-      "image": "/placeholder.jpg"
+      "image": "/assets/projects/momentai.webp"
     },
     {
-      "name": "Sistem Informasi Sekolah",
-      "desc": "Web pengelolaan data siswa menggunakan framework Laravel.",
+      "name": "Aplikasi Absensi",
+      "desc": "Aplikasi mobile untuk melakukan absensi dengan menggunakan teknologi scan wajah",
       "tech": [
-        "Laravel",
-        "MySQL",
-        "Bootstrap"
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "ML Kit"
       ],
-      "image": "/placeholder.jpg"
+      "image": "/assets/projects/attendanceapp.webp"
     },
     {
-      "name": "Sistem Informasi Sekolah 2",
-      "desc": "Web pengelolaan data siswa menggunakan framework Laravel.",
+      "name": "QRGenius App",
+      "desc": "Aplikasi mobile untuk membuat QR Code dengan mudah.",
       "tech": [
-        "Laravel",
-        "MySQL",
-        "Bootstrap"
+        "Flutter",
+        "Dart"
       ],
-      "image": "/placeholder.jpg"
+      "image": "/assets/projects/qrgenius.webp"
+    },
+    {
+      "name": "Reading List App",
+      "desc": "Aplikasi mobile untuk membuat daftar bacaan dengan mudah dan terstruktur.",
+      "tech": [
+        "Flutter",
+        "Dart"
+      ],
+      "image": "/assets/projects/readinglistapp.webp"
     }
   ],
-  "subtitle": "Kumpulan karya terpilih dari pengembangan frontend dan backend."
+  "subtitle": "Kumpulan karya terpilih dari pengembangan frontend dan backend untuk Website serta Aplikasi."
 }

@@ -4,62 +4,70 @@
   "work_title": "Pengalaman",
   "education": [
     {
-      "school": "TK Placeholder",
+      "school": "SDIT An-Nur - Sragen",
       "major": "",
-      "period": "2010 - 2012",
-      "desc": "Pendidikan anak usia dini, membangun fondasi kreativitas dan sosialisasi.",
-      "image": "/placeholder.jpg",
-      "default": false
-    },
-    {
-      "school": "SD Negeri Placeholder",
-      "major": "",
-      "period": "2012 - 2018",
+      "period": "2013 - 2019",
       "desc": "Pendidikan dasar enam tahun, membangun kemampuan literasi, numerasi, dan karakter.",
-      "image": "/placeholder.jpg",
+      "image": "/assets/education/edu-placeholder.svg",
       "default": false
     },
     {
-      "school": "SMP Negeri Placeholder",
+      "school": "IMTAQ SHIGOR Isy Karima - Karanganyar",
       "major": "",
-      "period": "2018 - 2021",
-      "desc": "Pendidikan menengah pertama, mulai mengenal dunia teknologi dan komputer.",
-      "image": "/placeholder.jpg",
+      "period": "2019 - 2022",
+      "desc": "Pendidikan menengah pertama, mulai mengenal dunia teknologi, bahasa arab dan menyelesaikan hafalan 30 juz.",
+      "image": "/assets/education/Isykarima.webp",
       "default": false
     },
     {
-      "school": "SMK Negeri Placeholder",
+      "school": "SMK IDN Boarding School - Karanganyar",
       "major": "Rekayasa Perangkat Lunak",
-      "period": "2022 - 2025",
-      "desc": "Mendalami pengembangan perangkat lunak, basis data, dan pemrograman web & mobile. Aktif dalam kegiatan ekskul dan kompetisi.",
-      "image": "/placeholder.jpg",
+      "period": "2024 - Now",
+      "desc": "Mendalami pengembangan perangkat lunak, basis data, dan pemrograman web & mobile serta bahasa inggris. Aktif dalam kegiatan ekskul dan kompetisi.",
+      "image": "/assets/education/idnbssolo.webp",
       "default": true
     }
   ],
   "work": [
     {
-      "role": "Freelance Mobile Developer",
-      "company": "Self-Employed",
-      "period": "2024 - Sekarang",
-      "desc": "Mengembangkan aplikasi mobile untuk klien lokal menggunakan Flutter. Bertanggung jawab penuh mulai dari desain UI hingga integrasi API dan deployment ke Play Store.",
-      "tags": ["Freelance", "Paid"],
-      "image": "/placeholder.jpg"
-    },
-    {
-      "role": "Praktik Kerja Lapangan (PKL)",
-      "company": "PT. Teknologi Nusantara",
-      "period": "Juli - September 2024",
-      "desc": "Terlibat dalam pengembangan sistem informasi internal perusahaan. Bertugas membangun modul laporan menggunakan Laravel dan melakukan pengujian fitur.",
-      "tags": ["Internship", "Unpaid"],
-      "image": "/placeholder.jpg"
-    },
-    {
-      "role": "Instruktur IT Tamu",
-      "company": "Bersama Tim Edukasi IT",
-      "period": "2023 - 2024",
-      "desc": "Berkolaborasi dengan tim untuk menyusun materi dan rutin mengajar IT di 4 instansi pendidikan yang berbeda. Dipercaya untuk membawakan materi seputar teknologi kepada siswa/i.",
+      "role": "IT Support | IDN Menyapa Nusantara",
+      "company": "Pengadilan Negeri Kelas 1A Mataram",
+      "period": "3 - 9 Februari 2026",
+      "desc": "Berkolaborasi dengan tim IT di Pengadilan Negeri Mataram Kelas 1A. Melakukan pekerjaan di bidang IT, seperti desain dan maintenance website.",
       "tags": ["Volunteer", "Unpaid"],
-      "image": "/placeholder.jpg"
+      "image": "/assets/experience/pengadilanmataram.webp"
+    },
+    {
+      "role": "Asisten Dosen IT Tamu | IDN Mengajar",
+      "company": "Universitas Diponegoro",
+      "period": "8 - 10 November 2025",
+      "desc": "Berkolaborasi dengan tim dalam sebuah mini workshop untuk mengajarkan IT tentang dasar AI Automation, khususnya untuk menjadi asisten dalam bisnis dan mempercepat proses yang repetitif. Berbagi pengetahuan dan praktik terbaik dalam AI Automation dengan para Mahasiswa UNDIP jurusan Administrasi Bisnis.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/undip.webp"
+    },
+    {
+      "role": "Dosen IT Tamu | IDN Mengajar",
+      "company": "Universitas Amikom Yogyakarta",
+      "period": "6 November 2025",
+      "desc": "Berkolaborasi dengan tim untuk mengajarkan IT tentang dasar AI, khususnya untuk menjadi asisten desain dalam Riset Visual, Copy Writing, Analisis Desain dan Co-Pilot Kreatif. Berbagi pengetahuan dan praktik terbaik dalam desain dengan para Mahasiswa AMIKOM jurusan DKV.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/amikom.webp"
+    },
+    {
+      "role": "Guru IT Tamu | IDN Mengajar",
+      "company": "Al-Ihsan IBS Ungaran Semarang",
+      "period": "11 Oktober 2025",
+      "desc": "Berkolaborasi dengan tim untuk mengajarkan IT tentang dasar desain di figma. Berbagi pengetahuan dan praktik terbaik dalam desain dengan siswa.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/al-ihsan.webp"
+    },
+    {
+      "role": "Guru IT Tamu | IDN Mengajar",
+      "company": "SMP Pawyatan Daha 2 Kediri",
+      "period": "21 - 25 April 2025",
+      "desc": "Berkolaborasi dengan tim untuk mengajarkan IT tentang dasar coding HTML. Berbagi pengetahuan dan praktik terbaik dalam teknologi dengan siswa.",
+      "tags": ["Volunteer", "Unpaid"],
+      "image": "/assets/experience/pawyatandaha2.webp"
     }
   ],
   "subtitle": "Latar belakang pendidikan dan pencapaian pengalaman saya."

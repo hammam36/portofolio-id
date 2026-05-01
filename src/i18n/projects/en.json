@@ -2,35 +2,45 @@
   "title": "Projects",
   "list": [
     {
-      "name": "E-Commerce Flutter App",
-      "desc": "Building a modern e-commerce UI with Flutter and Dart.",
+      "name": "MomentAI",
+      "desc": "AI-based application that can help you create schedules easily.",
       "tech": [
         "Flutter",
         "Dart",
-        "Firebase"
+        "Google Gemini API",
+        "Google Calendar API"
       ],
-      "image": "/placeholder.jpg"
+      "image": "/assets/projects/momentai.webp"
     },
     {
-      "name": "School Information System",
-      "desc": "Web management system for student data using Laravel framework.",
+      "name": "Attendance App",
+      "desc": "Mobile application for taking attendance using face recognition technology.",
       "tech": [
-        "Laravel",
-        "MySQL",
-        "Bootstrap"
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "ML Kit"
       ],
-      "image": "/placeholder.jpg"
+      "image": "/assets/projects/attendanceapp.webp"
     },
     {
-      "name": "School Information System 2",
-      "desc": "Web management system for student data using Laravel framework.",
+      "name": "QRGenius App",
+      "desc": "Mobile application for creating QR Codes easily.",
       "tech": [
-        "Laravel",
-        "MySQL",
-        "Bootstrap"
+        "Flutter",
+        "Dart"
       ],
-      "image": "/placeholder.jpg"
+      "image": "/assets/projects/qrgenius.webp"
+    },
+    {
+      "name": "Reading List App",
+      "desc": "Mobile application for creating reading lists easily and structured.",
+      "tech": [
+        "Flutter",
+        "Dart"
+      ],
+      "image": "/assets/projects/readinglistapp.webp"
     }
   ],
-  "subtitle": "Showcase of my featured frontend and backend works."
+  "subtitle": "Showcase of my featured frontend and backend works for Websites and Applications."
 }
