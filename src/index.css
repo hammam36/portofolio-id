@@ -65,39 +65,51 @@
 
 /* ═══ Theme Variables ═══ */
 :root {
-  /* Brand Logo Palettes (Tua ke Muda) */
-  --brand-1: #e40404;
-  /* Dark Red */
-  --brand-2: #fc4c04;
-  /* Dark Orange */
-  --brand-3: #fc8304;
-  /* Orange */
-  --brand-4: #fcb404;
-  /* Yellow Orange */
-  --brand-5: #fcdb04;
-  /* Yellow */
+  /* Luxury Gold Palette */
+  --gold-1: #8a6d3b;
+  /* Dark Gold */
+  --gold-2: #b8860b;
+  /* Deep Gold */
+  --gold-3: #d4af37;
+  /* Classic Metallic Gold */
+  --gold-4: #e6c762;
+  /* Bright Gold */
+  --gold-5: #f4e3a4;
+  /* Pale Gold */
 
-  --bg: #f9ebe6; /* Warm pale peach/orange tint */
-  --text: #4a150b; /* Deep reddish-brown */
-  --primary: var(--brand-2); /* Darker for light mode contrast */
-  --card-bg: #f9ebe6;
-  /* Red-tinted main shadow and white highlight */
-  --nm-shadow: 9px 9px 16px rgba(228, 4, 4, 0.12), 
-               -9px -9px 16px rgba(255, 255, 255, 0.9);
-  /* Dark orange floating glow */
-  --nm-shadow-floating: 0px 10px 20px rgba(252, 76, 4, 0.15);
+  --bg: #eceef2;
+  /* Premium Silverish Gray */
+  --text: #2d313a;
+  /* Deep Charcoal */
+  --primary: var(--gold-3);
+  /* Metallic Gold */
+  --card-bg: #eceef2;
+  --hover-text: #1a1b1e;
+  /* Dark text for hover on gold */
+
+  /* Neumorphic shadow for light mode (soft blue-gray and pure white) */
+  --nm-shadow: 9px 9px 16px rgba(163, 177, 198, 0.5),
+    -9px -9px 16px rgba(255, 255, 255, 0.9);
+  /* Golden floating glow */
+  --nm-shadow-floating: 0px 10px 20px rgba(212, 175, 55, 0.25);
 }
 
 [data-theme="dark"] {
-  --bg: #1f1210; /* Deep red-black */
-  --text: #fdf2d0; /* Soft pale yellow */
-  --primary: var(--brand-3); /* Brighter for dark mode contrast */
-  --card-bg: #1f1210;
-  /* Black drop shadow with Yellow-Orange highlight! */
-  --nm-shadow: 9px 9px 16px rgba(0, 0, 0, 0.6), 
-               -9px -9px 16px rgba(252, 180, 4, 0.06);
-  /* Pure Orange floating glow */
-  --nm-shadow-floating: 0px 10px 20px rgba(252, 131, 4, 0.15);
+  --bg: #1a1b1e;
+  /* Premium Dark Matte */
+  --text: #e0e2e6;
+  /* Silverish White */
+  --primary: var(--gold-4);
+  /* Brighter Gold for dark mode contrast */
+  --card-bg: #1a1b1e;
+  --hover-text: #e0e2e6;
+  /* White/Silver text for hover on gold */
+
+  /* Neumorphic shadow for dark mode (deep black and faint silver) */
+  --nm-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5),
+    -9px -9px 16px rgba(255, 255, 255, 0.03);
+  /* Pure Gold floating glow */
+  --nm-shadow-floating: 0px 10px 20px rgba(230, 199, 98, 0.15);
 }
 
 /* ═══ Global Body ═══ */
@@ -116,11 +128,11 @@ body {
 
 .nm-inset {
   background: var(--card-bg);
-  box-shadow: inset 4px 4px 8px rgba(228, 4, 4, 0.1), 
-              inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.5),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] .nm-inset {
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), 
-              inset -4px -4px 8px rgba(252, 180, 4, 0.06);
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.03);
 }

@@ -5,11 +5,13 @@
     "name": "Full Name",
     "email": "Email Address",
     "message": "Your Message",
-    "send": "Send Message"
+    "send": "Send Message",
+    "response_time": "I will get back to you as soon as possible (usually within 24 hours)."
   },
   "info_title": "Contact Info",
   "info": {
     "email": "hammam1dn@gmail.com",
+    "copied": "Copied to Clipboard!",
     "phone": "+62 882-0070-95426",
     "location": "Jl.Gabugan-Gemolong KM No.02, Canden, Ketro, Tanon, Sragen Regency, Central Java 57277"
   },
@@ -27,5 +29,6 @@
       "name": "Instagram",
       "url": "#"
     }
-  ]
+  ],
+  "footer": "Designed & Built by"
 }

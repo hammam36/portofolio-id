@@ -1,15 +1,15 @@
 /* ═══ Hero Section Styles ═══ */
 
 :root {
-  --accent: var(--brand-3);
-  --accent-glow: rgba(252, 131, 4, 0.6);
-  --accent-glow-dim: rgba(252, 131, 4, 0.2);
+  --accent: var(--primary);
+  --accent-glow: rgba(212, 175, 55, 0.6);
+  --accent-glow-dim: rgba(212, 175, 55, 0.2);
 }
 
 [data-theme="dark"] {
-  --accent: var(--brand-5);
-  --accent-glow: rgba(252, 219, 4, 0.6);
-  --accent-glow-dim: rgba(252, 219, 4, 0.2);
+  --accent: var(--primary);
+  --accent-glow: rgba(230, 199, 98, 0.6);
+  --accent-glow-dim: rgba(230, 199, 98, 0.2);
 }
 
 /* Hero Grid Layout — avatar column (prominent) left, main card right */
@@ -42,7 +42,7 @@
 
 /* Profession card — compact, fits text snugly */
 .hero-profession-card {
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 

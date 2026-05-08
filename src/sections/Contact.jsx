@@ -5,16 +5,51 @@ import "./Contact.css";
 export default function Contact({ t }) {
   const data = t.contact;
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState(''); // '' | 'sending' | 'success' | 'error'
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopyEmail = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(data.info.email);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Placeholder — bisa dihubungkan ke EmailJS, Formspree, dsb.
-    alert(`Pesan dari ${formData.name} terkirim!`);
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('sending');
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "ced427b6-c23b-4d8a-b2ee-02c1a2b2c048",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus(''), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus(''), 5000);
+      }
+    } catch (error) {
+      setStatus('error');
+      setTimeout(() => setStatus(''), 5000);
+    }
   };
 
   return (
@@ -69,13 +104,26 @@ export default function Contact({ t }) {
             />
           </div>
 
-          <button
-            type="submit"
-            className="flex items-center justify-center gap-2 p-4 nm-flat rounded-xl font-bold text-[var(--primary)] active:scale-95 transition-all hover:nm-inset"
-          >
-            <Icon.Send size={16} />
-            {data.form.send}
-          </button>
+          <div className="flex flex-col items-center gap-3 w-full mt-auto mb-4">
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="w-[100%] md:w-[80%] flex items-center justify-center gap-2 p-4 nm-flat rounded-xl font-bold text-[var(--primary)] active:scale-95 transition-all hover:nm-inset disabled:opacity-50"
+            >
+              {status === 'sending' ? (
+                <span className="animate-pulse">Mengirim...</span>
+              ) : status === 'success' ? (
+                <> <Icon.Check size={16} /> Terkirim! </>
+              ) : status === 'error' ? (
+                <> <Icon.X size={16} /> Gagal </>
+              ) : (
+                <> <Icon.Send size={16} /> {data.form.send} </>
+              )}
+            </button>
+            <p className="text-[10px] md:text-xs opacity-50 text-center font-medium italic">
+              {data.form.response_time}
+            </p>
+          </div>
         </form>
 
         {/* Info Kontak — 2 kolom */}
@@ -85,25 +133,38 @@ export default function Contact({ t }) {
             <h3 className="text-sm font-bold uppercase tracking-widest opacity-50 mb-5">
               {data.info_title}
             </h3>
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 nm-inset rounded-lg">
-                  <Icon.Mail size={16} className="text-[var(--primary)]" />
+            <div className="flex flex-col gap-2">
+              <button onClick={handleCopyEmail} className={`flex items-center gap-4 group p-3 hover:nm-flat rounded-2xl transition-all hover:text-[var(--primary)] w-full text-left ${isCopied ? 'text-[var(--primary)]' : ''}`}>
+                <div className="p-3 nm-inset rounded-xl transition-colors shrink-0">
+                  {isCopied ? <Icon.Check size={18} /> : <Icon.Mail size={18} />}
                 </div>
-                <span className="text-sm font-semibold">{data.info.email}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 nm-inset rounded-lg">
-                  <Icon.Phone size={16} className="text-[var(--primary)]" />
+                <div className="flex flex-col overflow-hidden">
+                  <span className="text-[10px] opacity-50 font-bold uppercase tracking-widest">Email</span>
+                  <span className="text-sm font-semibold truncate">
+                    {isCopied ? (data.info.copied || "Tersalin!") : data.info.email}
+                  </span>
                 </div>
-                <span className="text-sm font-semibold">{data.info.phone}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 nm-inset rounded-lg">
-                  <Icon.MapPin size={16} className="text-[var(--primary)]" />
+              </button>
+              
+              <a href="https://wa.me/62882007095426?text=Halo%20Hammam,%20saya%20melihat%20portofolio%20Anda!" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-3 hover:nm-flat rounded-2xl transition-all hover:text-[var(--primary)]">
+                <div className="p-3 nm-inset rounded-xl transition-colors shrink-0">
+                  <Icon.MessageCircle size={18} />
                 </div>
-                <span className="text-sm font-semibold">{data.info.location}</span>
-              </div>
+                <div className="flex flex-col overflow-hidden">
+                  <span className="text-[10px] opacity-50 font-bold uppercase tracking-widest">WhatsApp</span>
+                  <span className="text-sm font-semibold truncate">{data.info.phone}</span>
+                </div>
+              </a>
+
+              <a href="https://maps.app.goo.gl/myBZjnVt6CwaKCjS9" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-3 hover:nm-flat rounded-2xl transition-all hover:text-[var(--primary)]">
+                <div className="p-3 nm-inset rounded-xl transition-colors shrink-0">
+                  <Icon.MapPin size={18} />
+                </div>
+                <div className="flex flex-col overflow-hidden">
+                  <span className="text-[10px] opacity-50 font-bold uppercase tracking-widest">Location</span>
+                  <span className="text-sm font-semibold truncate" title={data.info.location}>{data.info.location}</span>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -128,6 +189,13 @@ export default function Contact({ t }) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-20 pt-8 border-t border-[var(--primary)]/10 text-center">
+        <p className="text-sm font-semibold opacity-60 hover:text-[var(--primary)] transition-colors">
+          &copy; {new Date().getFullYear()} {data.footer || "Designed & Built by"} Hammam Mubarak.
+        </p>
       </div>
     </section>
   );

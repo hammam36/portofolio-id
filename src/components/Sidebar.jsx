@@ -59,12 +59,12 @@ export default function Sidebar({ isOpen, setIsOpen, t, lang, toggleLang, theme,
         <div className="absolute bottom-10 left-6 right-6 flex flex-col gap-4">
           {/* Tombol Resume */}
           <a 
-            href="/cv-hammam.pdf" 
+            href="/CV_Hammam_Mubarak_Resume.pdf" 
             download
             className="flex items-center justify-center gap-2 p-3 nm-flat rounded-xl text-xs font-bold text-[var(--primary)] active:scale-95 transition-transform"
           >
             <Icon.FileDown size={16} />
-            {t.hero.resume || 'Unduh CV'}
+            {t.nav.download_cv || 'Unduh CV'}
           </a>
 
           <button onClick={toggleLang} className="flex items-center justify-center gap-2 p-3 nm-flat rounded-xl text-xs font-bold active:scale-95 transition-transform">

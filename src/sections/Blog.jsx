@@ -13,28 +13,30 @@ export default function Blog({ t }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.posts.map((post, index) => (
-          <article key={index} className="nm-flat rounded-[24px] flex flex-col justify-between overflow-hidden animate-slide-up" style={{ animationDelay: `${200 + index * 100}ms` }}>
+          <article key={index} className="nm-flat rounded-[24px] flex flex-col justify-between overflow-hidden animate-slide-up group" style={{ animationDelay: `${200 + index * 100}ms` }}>
             {/* Blog Image Header */}
             <div className="nm-inset m-4 mb-0 rounded-[18px] overflow-hidden">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-44 object-cover"
+                className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
 
             <div className="p-6 pt-4 flex flex-col flex-1 justify-between">
               <div>
-                {/* Tag */}
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 nm-inset rounded-full text-[var(--primary)]">
-                    <Icon.Tag size={10} />
-                    {post.tag}
-                  </span>
+                {/* Tags */}
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  {post.tags?.map((tagItem, idx) => (
+                    <span key={idx} className="flex items-center gap-1.5 text-[10px] font-bold px-3 py-1 nm-inset rounded-full text-[var(--primary)]">
+                      <Icon.Tag size={10} />
+                      {tagItem}
+                    </span>
+                  ))}
                 </div>
 
-                <h3 className="text-lg font-bold mb-3 leading-snug">{post.title}</h3>
-                <p className="text-sm opacity-70 leading-relaxed mb-4">{post.excerpt}</p>
+                <h3 className="text-lg font-bold mb-3 leading-snug line-clamp-2 group-hover:text-[var(--primary)] transition-colors">{post.title}</h3>
+                <p className="text-sm opacity-70 leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
               </div>
 
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-[var(--primary)]/10">
@@ -51,10 +53,12 @@ export default function Blog({ t }) {
 
                 <a 
                   href={post.url}
-                  className="flex items-center gap-1 text-xs font-bold text-[var(--primary)] hover:gap-2 transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-xs font-bold text-[var(--primary)] transition-transform group-hover:translate-x-1"
                 >
                   {data.read_more}
-                  <Icon.ChevronRight size={14} />
+                  <Icon.ChevronRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
             </div>

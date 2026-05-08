@@ -1,5 +1,41 @@
 {
   "title": "Kemampuan",
-  "mindset": "Problem Solving • Continuous Learning • Clean Code",
-  "subtitle": "Teknologi, alat, dan kapabilitas teknis yang saya kuasai."
+  "subtitle": "Teknologi, alat, dan kapabilitas teknis yang saya kuasai.",
+  "categories": [
+    {
+      "name": "Frontend Development",
+      "icon": "Code",
+      "skills": "HTML, CSS, JavaScript, React, Tailwind CSS"
+    },
+    {
+      "name": "Backend Development",
+      "icon": "Server",
+      "skills": "PHP, Laravel, Node.js, REST API"
+    },
+    {
+      "name": "Mobile Development",
+      "icon": "Smartphone",
+      "skills": "Dart, Flutter, Android SDK"
+    },
+    {
+      "name": "Database",
+      "icon": "Database",
+      "skills": "MySQL, Firebase"
+    },
+    {
+      "name": "Cloud & Deployment",
+      "icon": "Cloud",
+      "skills": "Vercel, Netlify, EdgeOne Pages, GitHub Pages"
+    },
+    {
+      "name": "UI/UX Design",
+      "icon": "PenTool",
+      "skills": "Figma, UI Design, Prototyping"
+    },
+    {
+      "name": "Development Tools",
+      "icon": "Wrench",
+      "skills": "VS Code, Android Studio, Git, GitHub, Postman"
+    }
+  ]
 }

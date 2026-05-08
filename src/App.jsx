@@ -73,7 +73,7 @@ function App() {
 
         {/* LOGIKA PINDAH HALAMAN */}
         <div className="animate-in fade-in duration-500" key={activePage}>
-          {activePage === "about" && <Hero t={t} />}
+          {activePage === "about" && <Hero t={t} setActivePage={setActivePage} />}
           {activePage === "abilities" && <Abilities t={t} />}
           {activePage === "journey" && <Journey t={t} />}
           {activePage === "projects" && <Projects t={t} />}

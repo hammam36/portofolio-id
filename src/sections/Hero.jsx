@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import PdfModal from "../components/PdfModal.jsx";
 import "./Hero.css";
 
-export default function Hero({ t }) {
+export default function Hero({ t, setActivePage }) {
   const [currentProfession, setCurrentProfession] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isCvOpen, setIsCvOpen] = useState(false);
 
   /* Cycle through professions every 3 seconds with exit/enter animation */
   useEffect(() => {
@@ -93,20 +95,23 @@ export default function Hero({ t }) {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="px-8 py-3 nm-flat rounded-full font-bold text-(--primary) active:scale-95 transition-all">
+            <button 
+              onClick={() => setActivePage("projects")}
+              className="px-8 py-3 nm-flat rounded-full font-bold text-[var(--primary)] active:scale-95 transition-all"
+            >
               {t.hero.cta}
             </button>
-            <a
-              href="/cv-hammam.pdf"
-              download
+            <button
+              onClick={() => setIsCvOpen(true)}
               className="px-8 py-3 nm-inset rounded-full font-bold opacity-70 hover:opacity-100 active:scale-95 transition-all"
             >
               {t.hero.resume}
-            </a>
+            </button>
           </div>
         </div>
 
       </div>
+      <PdfModal url={isCvOpen ? "/CV_Hammam_Mubarak_Resume.pdf" : null} onClose={() => setIsCvOpen(false)} />
     </section>
   );
 }

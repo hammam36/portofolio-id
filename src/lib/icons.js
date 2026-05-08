@@ -28,5 +28,16 @@ export {
   Route,
   FileText,
   ZoomIn,
-  X
+  X,
+  Check,
+  MessageCircle,
+  Instagram,
+  Linkedin,
+  Code,
+  Server,
+  Smartphone,
+  Database,
+  Cloud,
+  PenTool,
+  Wrench,
 } from 'lucide-react';
