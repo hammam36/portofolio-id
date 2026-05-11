@@ -8,16 +8,52 @@ import Projects from "./sections/Projects";
 import Awards from "./sections/Awards";
 import Blog from "./sections/Blog";
 import Contact from "./sections/Contact";
+const VALID_PAGES = ["about", "abilities", "journey", "projects", "awards", "blog", "contact"];
 
 function App() {
   const [lang, setLang] = useState(localStorage.getItem("lang") || "id");
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // State baru untuk menentukan halaman mana yang aktif
-  const [activePage, setActivePage] = useState("about");
+  // 1. Inisialisasi state awal dari URL
+  const getInitialPage = () => {
+    const hash = window.location.hash.replace("#", "");
+    return VALID_PAGES.includes(hash) ? hash : "about";
+  };
+
+  const [activePage, setActivePage] = useState(getInitialPage);
 
   const t = lang === "id" ? id : en;
+
+  // 2. Sinkronisasi state ke URL saat state berubah (dari navigasi menu)
+  useEffect(() => {
+    const currentHash = window.location.hash.replace("#", "");
+    if (currentHash !== activePage) {
+      window.history.pushState(null, "", `#${activePage}`);
+    }
+  }, [activePage]);
+
+  // 3. Sinkronisasi URL ke state saat tombol Back/Forward browser ditekan
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (VALID_PAGES.includes(hash)) {
+        setActivePage(hash);
+      } else if (!hash) {
+        setActivePage("about");
+      }
+    };
+    
+    // Gunakan 'popstate' karena kita memakai pushState di atas
+    window.addEventListener("popstate", handleHashChange);
+    // Tetap dengarkan hashchange untuk berjaga-jaga jika ada navigasi manual lewat <a> href
+    window.addEventListener("hashchange", handleHashChange);
+    
+    return () => {
+      window.removeEventListener("popstate", handleHashChange);
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);

@@ -8,7 +8,7 @@ export default function Projects({ t }) {
 
   return (
     <section id="projects" className="py-10">
-      <h2 className="text-3xl font-black mb-2 text-[var(--primary)] uppercase tracking-tighter animate-slide-up">
+      <h2 className="text-3xl font-black mb-2 text-gold-gradient uppercase tracking-tighter animate-slide-up">
         {t.projects.title}
       </h2>
       <p className="text-sm opacity-60 mb-10 animate-slide-up delay-100">{t.projects.subtitle}</p>

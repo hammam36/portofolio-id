@@ -65,17 +65,20 @@
 
 /* ═══ Theme Variables ═══ */
 :root {
-  /* Luxury Gold Palette */
-  --gold-1: #8a6d3b;
+  /* Real Metallic Gold Palette */
+  --gold-1: #996f21;
   /* Dark Gold */
-  --gold-2: #b8860b;
+  --gold-2: #c29b2b;
   /* Deep Gold */
-  --gold-3: #d4af37;
-  /* Classic Metallic Gold */
-  --gold-4: #e6c762;
-  /* Bright Gold */
-  --gold-5: #f4e3a4;
+  --gold-3: #e0b726;
+  /* True Metallic Gold */
+  --gold-4: #f2d55b;
+  /* Brighter Gold */
+  --gold-5: #fcf0a4;
   /* Pale Gold */
+
+  /* Gold Gradient for text or backgrounds */
+  --gold-gradient: linear-gradient(135deg, var(--gold-2) 0%, var(--gold-4) 50%, var(--gold-3) 100%);
 
   --bg: #eceef2;
   /* Premium Silverish Gray */
@@ -91,7 +94,7 @@
   --nm-shadow: 9px 9px 16px rgba(163, 177, 198, 0.5),
     -9px -9px 16px rgba(255, 255, 255, 0.9);
   /* Golden floating glow */
-  --nm-shadow-floating: 0px 10px 20px rgba(212, 175, 55, 0.25);
+  --nm-shadow-floating: 0px 10px 20px rgba(224, 183, 38, 0.25);
 }
 
 [data-theme="dark"] {
@@ -109,7 +112,7 @@
   --nm-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5),
     -9px -9px 16px rgba(255, 255, 255, 0.03);
   /* Pure Gold floating glow */
-  --nm-shadow-floating: 0px 10px 20px rgba(230, 199, 98, 0.15);
+  --nm-shadow-floating: 0px 10px 20px rgba(242, 213, 91, 0.15);
 }
 
 /* ═══ Global Body ═══ */
@@ -135,4 +138,12 @@ body {
 [data-theme="dark"] .nm-inset {
   box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5),
     inset -4px -4px 8px rgba(255, 255, 255, 0.03);
+}
+
+/* ═══ Typography Utilities ═══ */
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }

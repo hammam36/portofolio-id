@@ -6,7 +6,7 @@ export default function Abilities({ t }) {
   
   return (
     <section className="py-10">
-      <h2 className="text-3xl font-black mb-2 text-[var(--primary)] uppercase tracking-tighter animate-slide-up">
+      <h2 className="text-3xl font-black mb-2 text-gold-gradient uppercase tracking-tighter animate-slide-up">
         {data.title}
       </h2>
       <p className="text-sm opacity-60 mb-10 animate-slide-up delay-100">{data.subtitle}</p>
